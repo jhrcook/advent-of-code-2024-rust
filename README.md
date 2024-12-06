@@ -4,7 +4,7 @@
 
 | Day | Code                                       | Stars |
 |----:|--------------------------------------------|-------|
-|  01 | [./src/days/day01.rs](./src/days/day01.rs) | TK    |
+|  01 | [./src/days/day01.rs](./src/days/day01.rs) | ⭐️⭐️  |
 
 ```bash
 aoc run --day 1

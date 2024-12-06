@@ -1,6 +1,6 @@
+use aoc24::days;
 use clap::{Parser, Subcommand};
-
-pub mod days;
+use std::time::Instant;
 
 #[derive(Debug, Parser)] // requires `derive` feature
 #[command(name = "aoc")]
@@ -23,14 +23,13 @@ fn main() {
     env_logger::init();
     let args = Cli::parse();
 
+    let start = Instant::now();
     match args.command {
-        Commands::Day { day } => {
-            println!("Executing day {}...", day);
-            match day {
-                1 => days::day01::main(),
-                x => println!("No code for day {} yet.", x),
-            }
-            println!("Done! 🎄")
-        }
+        Commands::Day { day } => match day {
+            1 => days::day01::main(),
+            x => log::error!("No code for day {} yet.", x),
+        },
     };
+    let duration = start.elapsed();
+    log::info!("Done! 🎄 -- Elapsed time: {:?}", duration);
 }
