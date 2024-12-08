@@ -11,11 +11,12 @@ const EXAMPLE_INPUT: &str = "
 
 #[test]
 fn d01_p1_t1() {
-    env_logger::init();
+    let _ = env_logger::try_init();
     assert_eq!(puzzle_1(self::EXAMPLE_INPUT), Ok(11));
 }
 
 #[test]
 fn d01_p2_t1() {
+    let _ = env_logger::try_init();
     assert_eq!(puzzle_2(self::EXAMPLE_INPUT), Ok(31));
 }

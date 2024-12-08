@@ -27,6 +27,7 @@ fn main() {
     match args.command {
         Commands::Day { day } => match day {
             1 => days::day01::main(),
+            2 => days::day02::main(),
             x => log::error!("No code for day {} yet.", x),
         },
     };

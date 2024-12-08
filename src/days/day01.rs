@@ -65,7 +65,7 @@ pub fn main() {
     log::info!("Day 1: Historian Hysteria");
     let data = load(1, None);
     let result_1 = puzzle_1(&data).unwrap();
-    log::info!("Day 1 Puzzle 1 solution: {}", result_1);
+    log::info!("Puzzle 1 solution: {}", result_1);
     let result_2 = puzzle_2(&data).unwrap();
-    log::info!("Day 1 Puzzle 2 solution: {}", result_2);
+    log::info!("Puzzle 2 solution: {}", result_2);
 }
